@@ -20,7 +20,7 @@ public class ContactService {
     public void submitForm(ContactForm form) throws InvalidException, InvalidRecaptchaException {
         validationService.isInvalidName(form.getName());
         validationService.isInvalidEmail(form.getEmail());
-        recaptchaService.verifyRecaptcha(form.getGRecaptchaResponse());
+        recaptchaService.isValidRecaptcha(form.getGRecaptchaResponse());
 
     }
 }

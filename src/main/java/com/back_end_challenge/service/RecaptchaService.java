@@ -24,7 +24,7 @@ public class RecaptchaService {
         return true;
     }
 
-    private void isValidRecaptcha(String recaptcha) throws InvalidRecaptchaException {
+    public void isValidRecaptcha(String recaptcha) throws InvalidRecaptchaException {
         if(!verifyRecaptcha(recaptcha)){
             throw new InvalidRecaptchaException("The captcha is incorrect!");
         }
