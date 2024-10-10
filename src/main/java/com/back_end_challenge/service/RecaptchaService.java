@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
-public class RecptchaService {
+public class RecaptchaService {
 
     public boolean verifyRecaptcha(String recaptchaResponse) {
         String secretKey = "6LfCqFwqAAAAANt5gQx6znROyK-X1y1llawibVUW";

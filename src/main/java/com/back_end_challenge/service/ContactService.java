@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class ContactService {
 
     @Autowired
-    private RecptchaService recptchaService;
+    private RecaptchaService recaptchaService;
 
     @Autowired
     private ValidationService validationService;
@@ -20,7 +20,7 @@ public class ContactService {
     public void submitForm(ContactForm form) throws InvalidException, InvalidRecaptchaException {
         validationService.isInvalidName(form.getName());
         validationService.isInvalidEmail(form.getEmail());
-        recptchaService.verifyRecaptcha(form.getGRecaptchaResponse());
+        recaptchaService.verifyRecaptcha(form.getGRecaptchaResponse());
 
     }
 }
