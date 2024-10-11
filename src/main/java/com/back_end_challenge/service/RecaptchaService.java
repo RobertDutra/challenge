@@ -21,6 +21,7 @@ public class RecaptchaService {
 
         Map<String, Object> response = restTemplate.postForObject(url, params, Map.class);
         //return response != null && (Boolean) response.get("success");
+        //return Math.random() < 0.5;
         return true;
     }
 
