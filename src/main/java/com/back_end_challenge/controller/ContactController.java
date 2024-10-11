@@ -4,6 +4,7 @@ import com.back_end_challenge.entity.ContactForm;
 import com.back_end_challenge.exceptions.InvalidException;
 import com.back_end_challenge.exceptions.InvalidRecaptchaException;
 import com.back_end_challenge.service.ContactService;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +18,7 @@ public class ContactController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
+    @Operation(summary = "Validar formulário.")
     public void submitContactForm(@RequestBody ContactForm form) throws InvalidException, InvalidRecaptchaException {
         service.submitForm(form);
     }

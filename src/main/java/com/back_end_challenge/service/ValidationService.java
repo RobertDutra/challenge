@@ -13,13 +13,13 @@ public class ValidationService {
 
     private static final String NAME_PATTERN = "^[A-Za-zÀ-ÖØ-öø-ÿ\\s]+$";
 
-    public static boolean patternMatchesEmail(String email) {
+    public boolean patternMatchesEmail(String email) {
         return Pattern.compile(EMAIL_PATTERN)
                 .matcher(email)
                 .matches();
     }
 
-    public static boolean patternMatchesName(String name) {
+    public boolean patternMatchesName(String name) {
         return Pattern.compile(NAME_PATTERN)
                 .matcher(name)
                 .matches();
@@ -33,7 +33,7 @@ public class ValidationService {
     }
 
     public void isInvalidName(String name) throws InvalidException {
-        if (name.trim().isEmpty() || name == null){
+        if (name.trim().isEmpty()){
             throw new InvalidException("The name is empty");
         }
         if (!patternMatchesName(name)){
