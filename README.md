@@ -3,7 +3,7 @@
 
 # Sobre o projeto
 
-Projeto back end da Zedia, desenvolvido em Java com Spring Boot. Implemente uma microserviço para um formulário de contato que replique o email para o usuário e a empresa que esteja utilizando o serviço, fazendo a validação do nome, email e recaptcha obtidos atráves do formulário. Como não consegui finalizar a implementação da validação token, deixei sempre retornando true para deixar o sistema rodando sem interrupções.
+Projeto back end da Zedia, desenvolvido em Java com Spring Boot. Implementando um microserviço para um formulário de contato que replique o email para o usuário e a empresa que esteja utilizando o serviço, fazendo a validação do nome, email e recaptcha obtidos atráves do formulário. Validando as informações é feito o envio do email para o usuário e a empresa. Como não consegui finalizar a implementação da validação token, deixei sempre retornando true para deixar o sistema rodando sem interrupções.
 
 # Tecnologias utilizadas
 ## Back end
