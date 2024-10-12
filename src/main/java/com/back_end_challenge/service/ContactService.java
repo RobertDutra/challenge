@@ -15,12 +15,16 @@ public class ContactService {
     @Autowired
     private ValidationService validationService;
 
+    @Autowired
+    private EmailService emailService;
+
 
 
     public void submitForm(ContactForm form) throws InvalidException, InvalidRecaptchaException {
         validationService.isInvalidName(form.getName());
         validationService.isInvalidEmail(form.getEmail());
         recaptchaService.isValidRecaptcha(form.getGRecaptchaResponse());
-
+        emailService.sendEmailToUser(form);
+        emailService.sendEmailToCompany(form);
     }
 }
